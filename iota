@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+)
+
+// iota adds 1 year to the prior year
+// \n is new line, \t is tab, %v\ is value
+const (
+	a = 2020 + iota
+	b = 2020 + iota
+	c = 2020 + iota
+	d = 2020 + iota
+)
+
+func main() {
+
+	fmt.Println(`This process of adding one iota to the year is to give you a better perspective of this code!`)
+	fmt.Println("\t")
+	fmt.Println(`Here is the year 2020 + iota once`, a)
+	fmt.Println(`Here is the year 2021 + iota`, b)
+	fmt.Println(`Here is the year 2022 + iota`, c)
+	fmt.Println(`Here is the year 2023 + iota`, d)
+
+}
