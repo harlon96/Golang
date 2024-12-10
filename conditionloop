@@ -1,0 +1,16 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	// for init; condition; post{}
+	// this is going to print out in order the type of bit and hex
+
+	for i := 0; i <= 15; i++ {
+
+		fmt.Printf("%d\t%b\t%#x\n", i, i, i)
+	}
+}
