@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+)
+
+var x int
+var y float64
+
+//This code is showing how you can declare variables
+
+func main() {
+
+	x = 42
+	y = 41.12357
+
+	fmt.Println(`The variable x equals`, x)
+	fmt.Println(`The variable y equals`, y)
+	fmt.Printf("%T\t", x)
+	fmt.Printf("%T\t", y)
+	fmt.Println("\t")
+	//This show that you can add, multiply, and divide variable of the same type.
+	//You can not write syntax with different variable types.
+
+	fmt.Println(x + x)
+	fmt.Println(x * x)
+	fmt.Println(y / y)
+
+}
