@@ -1,0 +1,53 @@
+package main
+
+import (
+	"fmt"
+)
+
+// Go (often referred to as Golang) is a high-level, general-purpose programming language that is statically typed and compiled.
+
+type person struct {
+	first string
+	last  string
+	age   int
+	color string
+}
+
+type sperson struct {
+	person
+	ltk bool
+}
+
+func (s sperson) speak() {
+	fmt.Println("I am", s.first, s.last, ";", s.age, "years of age.", "My favorite color is ", "s.color.")
+}
+
+// func (r receiver) identifier(parameter) (return) (s)) {code}
+
+func main() {
+	sp1 := sperson{
+		person: person{
+			"Harlon",
+			"Hutchison",
+			49,
+			"Blue",
+		},
+		ltk: true,
+	}
+	sp2 := sperson{
+		person: person{
+			"Bob",
+			"Danger",
+			31,
+			"red",
+		},
+		ltk: true,
+	}
+	fmt.Println(sp1)
+	fmt.Println(sp2)
+}
+
+
+//{{Harlon Hutchison 49 Blue} true}
+{{Bob Danger 31 red} true}
+//
