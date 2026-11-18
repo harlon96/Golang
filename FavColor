@@ -1,0 +1,29 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+)
+
+// Go (often referred to as Golang) is a high-level, general-purpose programming language that is statically typed and compiled.
+
+func main() {
+	type FavColor struct {
+		ID     int
+		Name   string
+		Colors []string
+	}
+	group := FavColor{
+		ID:     2,
+		Name:   "Harlo_hutch",
+		Colors: []string{"Brown", "Red", "Green", "Maroon", "Yellow"},
+	}
+	h, err := json.Marshal(group)
+	if err != nil {
+		fmt.Println("Need to fix errors!!", err)
+	}
+	os.Stdout.Write(h)
+}
+
+//{"ID":2,"Name":"Harlo_hutch","Colors":["Brown","Red","Green","Maroon","Yellow"]}
