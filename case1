@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	n := "Hutch"
+
+	switch n {
+	case "Investment":
+		fmt.Println("money_bags")
+	case "Broke":
+		fmt.Println("pennies")
+	case "$$$":
+		fmt.Println("Someone has some cheddar")
+	default:
+		fmt.Println("This is the default response..")
+	}
+
+}
