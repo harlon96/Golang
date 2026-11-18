@@ -1,0 +1,44 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+//This is a program that will be using the fmt, and math library to make this project possible
+
+type circle struct {
+	radius float64
+}
+
+type shape interface {
+	area() float64
+}
+
+func (c circle) area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+func info(s shape) {
+	fmt.Println("--------------------------------------------------------")
+	fmt.Println("The area of this specific circle is:", s.area())
+	fmt.Println("--------------------------------------------------------")
+	fmt.Println("Binary answer:\t\t", "Hexadecimal answer:")
+	fmt.Println("--------------------------------------------------------")
+	fmt.Printf("%b\t%#x\t", s.area(), s.area())
+
+}
+
+func main() {
+	c := circle{5}
+	info(c) //This can work without a pointer
+	//fmt.Println(c.area())//works with the pointer
+}
+
+//Output answer
+//--------------------------------------------------------
+//The area of this specific circle is: 78.53981633974483
+//--------------------------------------------------------
+//Binary answer:		 Hexadecimal answer:
+//--------------------------------------------------------
+//5526748243772219p-46	0x1.3a28c59d5433bp+06	
