@@ -1,0 +1,57 @@
+package main
+
+import (
+	"fmt"
+	"runtime"
+)
+
+func main() {
+	timeone()
+
+}
+
+//this allows you to see your operating system, processor type, and how many CPUs you are working with..
+
+func timeone() {
+
+	fmt.Println("-------------------------------------")
+	fmt.Println("")
+	fmt.Println("OS\t\t", runtime.GOOS)
+	fmt.Println("")
+	fmt.Println("ARCH\t\t", runtime.GOARCH)
+	fmt.Println("")
+	fmt.Println("CPUs\t\t", runtime.NumCPU())
+	fmt.Println("")
+	fmt.Println("-------------------------------------")
+
+	//for init;condition;post{}
+
+	for i := 0; i < 15; i++ {
+
+		fmt.Println("This is a timer count:", i)
+
+		fmt.Println("-------------------------------------")
+		fmt.Println("")
+		fmt.Println("OS\t\t", runtime.GOOS)
+		fmt.Println("")
+		fmt.Println("ARCH\t\t", runtime.GOARCH)
+		fmt.Println("")
+		fmt.Println("CPUs\t\t", runtime.NumCPU())
+		fmt.Println("")
+		fmt.Println("-------------------------------------")
+
+	}
+}
+
+// I.E. 
+// -------------------------------------
+
+// OS		 linux
+
+// ARCH		 amd64
+
+// CPUs		 8
+
+// -------------------------------------
+// This is a timer count: 0
+// This information that is gathered from your device will repaet weith the new timer counter
